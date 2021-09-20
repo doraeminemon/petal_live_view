@@ -1,15 +1,15 @@
-# Petal
+# PetalLiveView
 
 Clone this project and rename
 
 ```sh
-export FROM="petal"
-export FROM_MODULE="Petal"
+export FROM="petal_live_view"
+export FROM_MODULE="PetalLiveView"
 export TO="my_app"
 export TO_MODULE="MyApp"
 
 # Skip these steps if you used GitHub's 'Use this template' feature
-git clone git@github.com:zestcreative/petal.git "$TO"
+git clone git@github.com:zestcreative/petal_live_view.git "$TO"
 cd "$TO"
 
 # Rename the project

@@ -1,4 +1,4 @@
-defmodule PetalWeb.Telemetry do
+defmodule PetalLiveViewWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 
@@ -31,11 +31,11 @@ defmodule PetalWeb.Telemetry do
       ),
 
       # Database Metrics
-      summary("petal.repo.query.total_time", unit: {:native, :millisecond}),
-      summary("petal.repo.query.decode_time", unit: {:native, :millisecond}),
-      summary("petal.repo.query.query_time", unit: {:native, :millisecond}),
-      summary("petal.repo.query.queue_time", unit: {:native, :millisecond}),
-      summary("petal.repo.query.idle_time", unit: {:native, :millisecond}),
+      summary("petal_live_view.repo.query.total_time", unit: {:native, :millisecond}),
+      summary("petal_live_view.repo.query.decode_time", unit: {:native, :millisecond}),
+      summary("petal_live_view.repo.query.query_time", unit: {:native, :millisecond}),
+      summary("petal_live_view.repo.query.queue_time", unit: {:native, :millisecond}),
+      summary("petal_live_view.repo.query.idle_time", unit: {:native, :millisecond}),
 
       # VM Metrics
       summary("vm.memory.total", unit: {:byte, :kilobyte}),
@@ -49,7 +49,7 @@ defmodule PetalWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {PetalWeb, :count_users, []}
+      # {PetalLiveViewWeb, :count_users, []}
     ]
   end
 end

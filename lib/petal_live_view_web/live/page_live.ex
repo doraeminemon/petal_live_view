@@ -1,5 +1,5 @@
-defmodule PetalWeb.PageLive do
-  use PetalWeb, :live_view
+defmodule PetalLiveViewWeb.PageLive do
+  use PetalLiveViewWeb, :live_view
 
   @impl true
   def mount(_params, _session, socket) do
@@ -26,7 +26,7 @@ defmodule PetalWeb.PageLive do
   end
 
   defp search(query) do
-    if not PetalWeb.Endpoint.config(:code_reloader) do
+    if not PetalLiveViewWeb.Endpoint.config(:code_reloader) do
       raise "action disabled when not in development"
     end
 

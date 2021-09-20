@@ -7,15 +7,15 @@
 # General application configuration
 import Config
 
-config :petal,
-  ecto_repos: [Petal.Repo]
+config :petal_live_view,
+  ecto_repos: [PetalLiveView.Repo]
 
 # Configures the endpoint
-config :petal, PetalWeb.Endpoint,
+config :petal_live_view, PetalLiveViewWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "rQRP/j3RkvaPk6NcMaNmAifMzy19/BRrAJHZObDJMHAzxzfpVv6dJsI3Mjw07LUl",
-  render_errors: [view: PetalWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: Petal.PubSub,
+  render_errors: [view: PetalLiveViewWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: PetalLiveView.PubSub,
   live_view: [signing_salt: "tail8oyy"]
 
 # Configures Elixir's Logger

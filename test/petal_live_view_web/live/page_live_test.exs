@@ -1,5 +1,5 @@
-defmodule PetalWeb.PageLiveTest do
-  use PetalWeb.ConnCase
+defmodule PetalLiveViewWeb.PageLiveTest do
+  use PetalLiveViewWeb.ConnCase
 
   import Phoenix.LiveViewTest
 
