@@ -1,5 +1,5 @@
 body {
-  @apply antialiased relative bg-cool-gray-200 font-sans;
+  @apply relative font-sans antialiased bg-cool-gray-200;
 }
 
 header {
@@ -7,15 +7,15 @@ header {
 }
 
 .container {
-  @apply max-w-6xl mx-auto px-6;
+  @apply max-w-6xl px-6 mx-auto;
 }
 
 h1 {
-  @apply text-center text-cool-gray-900 font-extrabold text-4xl mb-8;
+  @apply mb-8 text-4xl font-extrabold text-center text-cool-gray-900;
 }
 
 ul.examples {
-  @apply mt-8 text-2xl mx-auto max-w-xs list-disc;
+  @apply max-w-xs mx-auto mt-8 text-2xl list-disc;
 
   li {
     @apply mt-3;
@@ -36,7 +36,7 @@ ul.examples {
   @apply max-w-xl mx-auto text-center;
 
   button {
-    @apply bg-transparent mx-1 py-2 px-4 border border-cool-gray-400 border-2 rounded-lg shadow-sm transition ease-in-out duration-150 outline-none;
+    @apply px-4 py-2 mx-1 transition duration-150 ease-in-out bg-transparent border border-2 rounded-lg shadow-sm outline-none border-cool-gray-400;
   }
 
   button:hover {
@@ -52,11 +52,11 @@ ul.examples {
   }
 
   .meter {
-    @apply flex h-12 overflow-hidden text-base bg-cool-gray-300 rounded-lg mb-8;
+    @apply flex h-12 mb-8 overflow-hidden text-base rounded-lg bg-cool-gray-300;
   }
 
   .meter > span {
-    @apply flex flex-col justify-center text-cool-gray-900 text-center whitespace-nowrap bg-yellow-300 font-bold;
+    @apply flex flex-col justify-center font-bold text-center bg-yellow-300 text-cool-gray-900 whitespace-nowrap;
     transition: width 2s ease;
   }
 }
@@ -67,7 +67,7 @@ ul.examples {
   @apply max-w-lg mx-auto text-center;
 
   .card {
-    @apply bg-white shadow rounded-lg shadow-lg;
+    @apply bg-white rounded-lg shadow shadow-lg;
 
     .content {
       @apply p-6;
@@ -87,7 +87,7 @@ ul.examples {
   }
 
   .amount {
-    @apply text-4xl leading-none font-extrabold text-cool-gray-900 mt-4;
+    @apply mt-4 text-4xl font-extrabold leading-none text-cool-gray-900;
   }
 }
 
@@ -97,26 +97,26 @@ ul.examples {
   @apply max-w-2xl mx-auto;
 
   .stats {
-    @apply mb-8 rounded-lg bg-white shadow-lg grid grid-cols-3;
+    @apply grid grid-cols-3 mb-8 bg-white rounded-lg shadow-lg;
 
     .stat {
       @apply p-6 text-center;
 
       .name {
-        @apply block mt-2 text-lg leading-6 font-medium text-cool-gray-500;
+        @apply block mt-2 text-lg font-medium leading-6 text-cool-gray-500;
       }
 
       .value {
-        @apply block text-5xl leading-none font-extrabold text-indigo-600;
+        @apply block text-5xl font-extrabold leading-none text-indigo-600;
       }
     }
   }
 
   button {
-    @apply inline-flex items-center px-4 py-2 border border-indigo-300 text-sm shadow-sm leading-6 font-medium rounded-md text-indigo-700 bg-indigo-100 transition ease-in-out duration-150 outline-none;
+    @apply inline-flex items-center px-4 py-2 text-sm font-medium leading-6 text-indigo-700 transition duration-150 ease-in-out bg-indigo-100 border border-indigo-300 rounded-md shadow-sm outline-none;
 
     img {
-      @apply mr-2 h-4 w-4;
+      @apply w-4 h-4 mr-2;
     }
   }
 
@@ -131,15 +131,15 @@ ul.examples {
       @apply flex items-center;
 
       label {
-        @apply uppercase tracking-wide text-indigo-800 text-xs font-semibold mr-2;
+        @apply mr-2 text-xs font-semibold tracking-wide text-indigo-800 uppercase;
       }
 
       select {
-        @apply appearance-none bg-cool-gray-200 border-indigo-300 border text-indigo-700 py-2 px-4 rounded-lg leading-tight font-semibold cursor-pointer mr-2 h-10;
+        @apply h-10 px-4 py-2 mr-2 font-semibold leading-tight text-indigo-700 border border-indigo-300 rounded-lg appearance-none cursor-pointer bg-cool-gray-200;
       }
 
       select:focus {
-        @apply outline-none bg-white border-indigo-500;
+        @apply bg-white border-indigo-500 outline-none;
       }
     }
   }
@@ -154,7 +154,7 @@ ul.examples {
     @apply inline-flex items-center;
 
     input[type="text"] {
-      @apply h-10 border border-cool-gray-400 rounded-l-md bg-white px-5 text-base;
+      @apply h-10 px-5 text-base bg-white border border-cool-gray-400 rounded-l-md;
     }
 
     input[type="text"]:focus {
@@ -167,10 +167,10 @@ ul.examples {
   }
 
   button {
-    @apply h-10 px-4 py-2 bg-transparent border border-cool-gray-400 border-l-0 rounded-r-md transition ease-in-out duration-150 outline-none;
+    @apply h-10 px-4 py-2 transition duration-150 ease-in-out bg-transparent border border-l-0 outline-none border-cool-gray-400 rounded-r-md;
 
     img {
-      @apply h-4 w-4;
+      @apply w-4 h-4;
     }
   }
 
@@ -179,48 +179,84 @@ ul.examples {
   }
 
   .open {
-    @apply inline-flex items-center px-3 py-1 rounded-md text-xs font-medium leading-5 bg-green-200 text-green-800 rounded-full;
+    @apply inline-flex items-center px-3 py-1 text-xs font-medium leading-5 text-green-800 bg-green-200 rounded-md rounded-full;
   }
 
   .closed {
-    @apply inline-flex items-center px-3 py-1 rounded-md text-xs font-medium leading-5 bg-red-200 text-red-800 rounded-full;
+    @apply inline-flex items-center px-3 py-1 text-xs font-medium leading-5 text-red-800 bg-red-200 rounded-md rounded-full;
   }
 
   .stores {
-    @apply mt-8 bg-white shadow overflow-hidden rounded-md;
+    @apply mt-8 overflow-hidden bg-white rounded-md shadow;
 
     li {
-      @apply border-t border-cool-gray-300 px-6 py-4;
+      @apply px-6 py-4 border-t border-cool-gray-300;
 
       .first-line {
         @apply flex items-center justify-between;
 
         .name {
-          @apply text-lg leading-5 font-medium text-indigo-600 truncate;
+          @apply text-lg font-medium leading-5 text-indigo-600 truncate;
         }
 
         .status {
-          @apply ml-2 flex-shrink-0 flex;
+          @apply flex flex-shrink-0 ml-2;
         }
       }
 
       .second-line {
-        @apply mt-2 flex justify-between;
+        @apply flex justify-between mt-2;
 
         .street {
-          @apply mt-0 flex items-center text-base leading-5 text-cool-gray-400;
+          @apply flex items-center mt-0 text-base leading-5 text-cool-gray-400;
 
           img {
-            @apply flex-shrink-0 mr-1 h-5 w-5;
+            @apply flex-shrink-0 w-5 h-5 mr-1;
           }
         }
 
         .phone_number {
-          @apply mt-0 flex items-center text-sm leading-5 text-cool-gray-400;
+          @apply flex items-center mt-0 text-sm leading-5 text-cool-gray-400;
 
           img {
-            @apply flex-shrink-0 mr-2 h-5 w-5;
+            @apply flex-shrink-0 w-5 h-5 mr-2;
           }
+        }
+      }
+    }
+  }
+
+  .flights {
+    @apply mt-8 overflow-hidden bg-white rounded-md shadow;
+
+    li {
+      @apply px-6 py-4 border-t border-cool-gray-300;
+
+      .first-line {
+        @apply flex items-center justify-between;
+
+        .number {
+          @apply text-lg font-semibold leading-5 text-indigo-600 truncate;
+        }
+
+        .origin-destination {
+          @apply flex items-center mt-0 text-base leading-5 text-indigo-600;
+
+          img {
+            @apply flex-shrink-0 w-5 h-5 mr-1;
+          }
+        }
+      }
+
+      .second-line {
+        @apply flex justify-between mt-2;
+
+        .departs {
+          @apply text-cool-gray-500;
+        }
+
+        .arrives {
+          @apply text-cool-gray-500;
         }
       }
     }
@@ -239,7 +275,7 @@ ul.examples {
   }
 
   .card {
-    @apply m-6 max-w-sm rounded bg-white overflow-hidden shadow-lg;
+    @apply max-w-sm m-6 overflow-hidden bg-white rounded shadow-lg;
 
     img {
       @apply w-full;
@@ -250,19 +286,19 @@ ul.examples {
     }
 
     .model {
-      @apply pb-3 text-center text-cool-gray-900 font-bold text-xl;
+      @apply pb-3 text-xl font-bold text-center text-cool-gray-900;
     }
 
     .details {
-      @apply px-6 mt-2 flex justify-between;
+      @apply flex justify-between px-6 mt-2;
     }
 
     .price {
-      @apply text-cool-gray-700 font-semibold text-xl;
+      @apply text-xl font-semibold text-cool-gray-700;
     }
 
     .type {
-      @apply inline-block bg-cool-gray-300 rounded-full px-3 py-1 text-sm font-semibold text-cool-gray-700;
+      @apply inline-block px-3 py-1 text-sm font-semibold rounded-full bg-cool-gray-300 text-cool-gray-700;
     }
   }
 
@@ -273,7 +309,7 @@ ul.examples {
       @apply flex items-baseline justify-around;
 
       select {
-        @apply appearance-none w-1/3 bg-cool-gray-200 border border-cool-gray-400 text-cool-gray-700 py-3 px-4 rounded-lg leading-tight font-semibold cursor-pointer;
+        @apply w-1/3 px-4 py-3 font-semibold leading-tight border rounded-lg appearance-none cursor-pointer bg-cool-gray-200 border-cool-gray-400 text-cool-gray-700;
       }
 
       select:focus {
@@ -284,7 +320,7 @@ ul.examples {
         @apply flex;
 
         input[type="checkbox"] {
-          @apply opacity-0 fixed w-0;
+          @apply fixed w-0 opacity-0;
         }
 
         input[type="checkbox"]:checked + label {
@@ -292,11 +328,11 @@ ul.examples {
         }
 
         label {
-          @apply inline-block border-t border-b border-cool-gray-400 bg-cool-gray-300 py-3 px-4 text-lg font-semibold leading-5;
+          @apply inline-block px-4 py-3 text-lg font-semibold leading-5 border-t border-b border-cool-gray-400 bg-cool-gray-300;
         }
 
         label:hover {
-          @apply bg-cool-gray-400 cursor-pointer;
+          @apply cursor-pointer bg-cool-gray-400;
         }
 
         label:first-of-type {
@@ -309,7 +345,7 @@ ul.examples {
       }
 
       a {
-        @apply inline underline text-lg;
+        @apply inline text-lg underline;
       }
     }
   }
@@ -321,29 +357,29 @@ ul.examples {
   @apply max-w-4xl mx-auto;
 
   .wrapper {
-    @apply mb-4 align-middle inline-block min-w-full shadow overflow-hidden rounded-lg border-b border-cool-gray-300;
+    @apply inline-block min-w-full mb-4 overflow-hidden align-middle border-b rounded-lg shadow border-cool-gray-300;
   }
 
   a {
-    @apply underline text-indigo-500 font-semibold;
+    @apply font-semibold text-indigo-500 underline;
   }
 
   .fresh {
-    @apply px-4 py-2 rounded-md text-lg font-medium leading-5 bg-green-200 text-green-800 rounded-full;
+    @apply px-4 py-2 text-lg font-medium leading-5 text-green-800 bg-green-200 rounded-md rounded-full;
   }
 
   .stale {
-    @apply px-4 py-2 rounded-md text-lg font-medium leading-5 bg-red-200 text-red-800 rounded-full;
+    @apply px-4 py-2 text-lg font-medium leading-5 text-red-800 bg-red-200 rounded-md rounded-full;
   }
 
   table {
     @apply min-w-full;
 
     th {
-      @apply bg-transparent px-6 py-4 border-b border-cool-gray-300 bg-indigo-700 text-base leading-4 font-medium uppercase tracking-wider text-center text-white;
+      @apply px-6 py-4 text-base font-medium leading-4 tracking-wider text-center text-white uppercase bg-transparent bg-indigo-700 border-b border-cool-gray-300;
 
       a {
-        @apply no-underline text-white;
+        @apply text-white no-underline;
       }
 
       a:hover {
@@ -352,7 +388,7 @@ ul.examples {
     }
 
     td {
-      @apply px-6 py-4 whitespace-nowrap border-b border-cool-gray-300 text-lg leading-5 font-medium text-cool-gray-900 text-center;
+      @apply px-6 py-4 text-lg font-medium leading-5 text-center border-b whitespace-nowrap border-cool-gray-300 text-cool-gray-900;
     }
 
     tbody {
@@ -369,14 +405,14 @@ ul.examples {
   }
 
   .footer {
-    @apply text-center bg-white max-w-4xl mx-auto text-lg py-8;
+    @apply max-w-4xl py-8 mx-auto text-lg text-center bg-white;
 
     .pagination {
       @apply inline-flex shadow-sm;
     }
 
     a {
-      @apply -ml-px inline-flex items-center px-3 py-2 border border-cool-gray-300 bg-white text-base leading-5 font-medium text-cool-gray-600 no-underline;
+      @apply inline-flex items-center px-3 py-2 -ml-px text-base font-medium leading-5 no-underline bg-white border border-cool-gray-300 text-cool-gray-600;
     }
 
     a:hover {
@@ -384,7 +420,7 @@ ul.examples {
     }
 
     a.active {
-      @apply bg-indigo-700 text-white;
+      @apply text-white bg-indigo-700;
     }
 
     a.previous {
@@ -403,7 +439,7 @@ ul.examples {
   @apply max-w-3xl mx-auto;
 
   .incident {
-    @apply flex items-center justify-between mt-2 border-r border-b border-l border-cool-gray-300 border-l-0 border-t bg-white rounded-b rounded-b-none rounded p-4 leading-normal w-full;
+    @apply flex items-center justify-between w-full p-4 mt-2 leading-normal bg-white border-t border-b border-l border-l-0 border-r rounded rounded-b-none rounded-b border-cool-gray-300;
   }
 
   .priority {
@@ -411,11 +447,11 @@ ul.examples {
   }
 
   .description {
-    @apply flex-1 px-4 text-cool-gray-800 font-bold text-lg;
+    @apply flex-1 px-4 text-lg font-bold text-cool-gray-800;
   }
 
   .location {
-    @apply flex-1 px-4 font-semibold text-lg text-cool-gray-600 text-base;
+    @apply flex-1 px-4 text-base text-lg font-semibold text-cool-gray-600;
   }
 
   .status {
@@ -423,7 +459,7 @@ ul.examples {
   }
 
   button {
-    @apply bg-indigo-500 text-white font-semibold py-2 px-4 rounded outline-none;
+    @apply px-4 py-2 font-semibold text-white bg-indigo-500 rounded outline-none;
   }
 
   button:hover {
@@ -431,40 +467,40 @@ ul.examples {
   }
 
   .resolved {
-    @apply text-lg font-bold leading-5 text-indigo-600 bg-transparent text-indigo-600 px-2;
+    @apply px-2 text-lg font-bold leading-5 text-indigo-600 bg-transparent;
   }
 
   .priority-1 {
-    @apply px-4 py-2 rounded-md text-lg font-bold leading-5 bg-red-500 text-white;
+    @apply px-4 py-2 text-lg font-bold leading-5 text-white bg-red-500 rounded-md;
   }
 
   .priority-2 {
-    @apply px-4 py-2 rounded-md text-lg font-bold leading-5 bg-orange-500 text-white;
+    @apply px-4 py-2 text-lg font-bold leading-5 text-white bg-orange-500 rounded-md;
   }
 
   .priority-3 {
-    @apply px-4 py-2 rounded-md text-lg font-bold leading-5 bg-yellow-500 text-white;
+    @apply px-4 py-2 text-lg font-bold leading-5 text-white bg-yellow-500 rounded-md;
   }
 }
 
 /* New Incident */
 
 #new-incident {
-  @apply mx-auto w-full max-w-md;
+  @apply w-full max-w-md mx-auto;
 
   .wrapper {
-    @apply bg-white py-6 shadow rounded-lg px-10;
+    @apply px-10 py-6 bg-white rounded-lg shadow;
   }
 
   form {
     input[type="text"],
     textarea {
-      @apply appearance-none block w-full px-3 py-2 border border-cool-gray-400 rounded-md transition duration-150 ease-in-out text-base leading-5;
+      @apply block w-full px-3 py-2 text-base leading-5 transition duration-150 ease-in-out border rounded-md appearance-none border-cool-gray-400;
     }
 
     input[type="text"]:focus,
     textarea:focus {
-      @apply outline-none border-indigo-300 ring ring-indigo-300;
+      @apply border-indigo-300 outline-none ring ring-indigo-300;
     }
 
     .group:not(:first-of-type) {
@@ -472,11 +508,11 @@ ul.examples {
     }
 
     label {
-      @apply block text-sm font-bold leading-5 text-cool-gray-700 mb-1;
+      @apply block mb-1 text-sm font-bold leading-5 text-cool-gray-700;
     }
 
     button {
-      @apply mt-6 w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600  transition duration-150 ease-in-out outline-none;
+      @apply flex justify-center w-full px-4 py-2 mt-6 text-sm font-medium text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md outline-none;
     }
 
     button:hover {
@@ -484,11 +520,11 @@ ul.examples {
     }
 
     button:focus {
-      @apply outline-none border-indigo-700 ring ring-indigo-300;
+      @apply border-indigo-700 outline-none ring ring-indigo-300;
     }
 
     .help-block {
-      @apply text-orange-600 mt-4;
+      @apply mt-4 text-orange-600;
     }
   }
 }
