@@ -3,10 +3,12 @@ defmodule PetalLiveViewWeb.SalesDashboardLive do
   alias PetalLiveView.Sales
 
   def mount(_params, _session, socket) do
+    socket = socket
+      |> assign_stats()
+      |> assign(refresh: 1)
     if connected?(socket) do
-      :timer.send_interval(1000, self(), :tick)
+      schedule_refresh(socket)
     end
-    socket = assign_stats(socket)
 
     {:ok, socket}
   end
@@ -41,6 +43,14 @@ defmodule PetalLiveViewWeb.SalesDashboardLive do
           </span>
         </div>
       </div>
+      <form phx-change="select-refresh">
+        <label for="refresh">
+          Refresh every:
+        </label>
+        <select name="refresh">
+          <%= options_for_select(refresh_options(), @refresh) %>
+        </select>
+      </form>
       <button phx-click="refresh">
         <img src="images/refresh.svg">
         Refresh
@@ -49,8 +59,31 @@ defmodule PetalLiveViewWeb.SalesDashboardLive do
     """
   end
 
+  defp refresh_options do
+    [
+      {"1s", 1},
+      {"5s", 5},
+      {"15s", 15},
+      {"30s", 30},
+      {"60s", 60}
+    ]
+  end
+
+  defp schedule_refresh(socket) do
+    Process.send_after(self(), :tick, socket.assigns.refresh * 1000)
+  end
+
   def handle_info(:tick, socket) do
     socket = assign_stats(socket)
+    schedule_refresh(socket)
+
+    {:noreply, socket}
+  end
+
+  def handle_event("select-refresh", %{"refresh" => refresh}, socket) do
+    refresh = String.to_integer(refresh)
+    socket = assign(socket, refresh: refresh)
+
     {:noreply, socket}
   end
 
