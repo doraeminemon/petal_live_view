@@ -1,0 +1,4 @@
+<h1>Sales Stuff</h1>
+<h2>Top Sellers</h2>
+<h2>Recent Order</h2>
+<%= live_render(@conn, PetalLiveViewWeb.SalesDashboardLive) %>
