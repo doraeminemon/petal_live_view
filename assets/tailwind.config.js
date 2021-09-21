@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'jit',
   purge: [
     '../lib/petal_live_view_web/live/**/*.ex',
     '../lib/petal_live_view_web/live/**/*.leex',
