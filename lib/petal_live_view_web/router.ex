@@ -22,6 +22,7 @@ defmodule PetalLiveViewWeb.Router do
     live "/license", LicenseLive
     live "/sales-dashboard", SalesDashboardLive
     get "/sales", SalesController, :index
+    live "/search", SearchLive
   end
 
   # Other scopes may use custom stacks.
