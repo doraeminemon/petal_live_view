@@ -7,10 +7,10 @@ defmodule PetalLiveViewWeb.SearchLive do
       assign(
         socket,
         zip: "",
-        stores: [],
+        stores: Stores.list_stores,
         loading: false
       )
-    {:ok, socket}
+    {:ok, socket, temporary_assigns: [stores: []]}
   end
 
   def render(assigns) do
